@@ -1,20 +1,30 @@
-<main class="view"></main>
-	<h1 class="title">
-		Micro Code Editor
-		<small>With syntax highlight*</small>
-	</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro Code Editor</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css">
+</head>
+<body>
+    <main class="view">
+        <h1 class="title">
+            Micro Code Editor
+            <small>With syntax highlight*</small>
+        </h1>
 
-	<div class="window">
-		<div class="window-header">
-			<div class="action-buttons"></div>
-			<select class="language">
-				<option value="javascript" selected>JavaScript</option>
-				<option value="markup">HTML</option>
-				<option value="php">PHP</option>
-			</select>
-		</div>
-		<div class="window-body">
-			<textarea class="code-input">// Switch the language and put some code on me :)           ↑↑↑↑↑↑
+        <div class="window">
+            <div class="window-header">
+                <div class="action-buttons"></div>
+                <select class="language">
+                    <option value="javascript" selected>JavaScript</option>
+                    <option value="markup">HTML</option>
+                    <option value="php">PHP</option>
+                </select>
+            </div>
+            <div class="window-body">
+                <textarea class="code-input">// Switch the language and put some code on me :)           ↑↑↑↑↑↑
 // This is a 'Hello World' example.
 
 function greetings(name){
@@ -22,15 +32,19 @@ function greetings(name){
     return "Hello, " + name + "!";
 }
 
-window.onLoad = alert(greetings());</textarea>
-			<pre class="code-output">
-				<code class="language-javascript">
-					
-				</code>
-			</pre>
-		</div>
-	</div>
-	<div class="credits">
-		*thanks to <a href="https://twitter.com/leaverou">Lea Verou</a> for <a href="http://prismjs.com/">Prism.js</a>
-	</div>
-</main>
+window.onload = () => alert(greetings());</textarea>
+                <pre class="code-output">
+                    <code class="language-javascript"></code>
+                </pre>
+            </div>
+        </div>
+        <div class="credits">
+            *thanks to <a href="https://twitter.com/leaverou">Lea Verou</a> for <a href="http://prismjs.com/">Prism.js</a>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
